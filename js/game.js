@@ -31,12 +31,3 @@ const config = {
 
 const game = new Phaser.Game(config)
 console.log(game)
-
-
-=======
-  backgroundColor: 0x5f6e7a,
-};
->>>>>>> origin/main
-
-const game = new Phaser.Game(config);
-console.log(game);
