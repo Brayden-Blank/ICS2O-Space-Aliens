@@ -82,14 +82,14 @@ class GameScene extends Phaser.Scene {
     }
 
     if (keyUpObj.isDown === true) {
-      this.ship.y -= 15
+      this.ship.y -= 6
       if (this.ship.y < 700) {
         this.ship.y = 700
       }
     }
 
     if (keyDownObj.isDown === true) {
-      this.ship.y += 15
+      this.ship.y += 6
       if (this.ship.y > 1080) {
         this.ship.y = 1080
       }
