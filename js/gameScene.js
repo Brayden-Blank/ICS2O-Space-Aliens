@@ -72,7 +72,6 @@ class GameScene extends Phaser.Scene {
       this.scoreText.setText("Score: " + this.score.toString())
       this.createAlien()
       this.createAlien() 
-      this.createAlien()
     }.bind(this))
 
     // Collisions between ship and aliens
