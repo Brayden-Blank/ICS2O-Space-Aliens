@@ -1,9 +1,9 @@
 /* global Phaser */
 
 // Copyright (c) 2022 Brayden Blank all rights reserved
-//
-// Created by Brayden Blank
-// Created on: April 2022
+
+
+// Created on: April-May 2022
 // This is the Game Scene
 
 class GameScene extends Phaser.Scene {
@@ -71,6 +71,7 @@ class GameScene extends Phaser.Scene {
       this.score = this.score + 1
       this.scoreText.setText("Score: " + this.score.toString())
       this.createAlien()
+      this.createAlien() 
       this.createAlien()
     }.bind(this))
 
@@ -80,7 +81,7 @@ class GameScene extends Phaser.Scene {
       this.physics.pause()
       alienCollide.destroy()
       shipCollide.destroy()
-      this.gameOverText = this.add.text(1920 / 2, 1080 / 2, "Game Over!\nClick to pay again.", this.gameOverTextStyle).setOrigin(0.5)
+      this.gameOverText = this.add.text(1920 / 2, 1080 / 2, "Game Over!\nClick to play again.", this.gameOverTextStyle).setOrigin(0.5)
       this.gameOverText.setInteractive({ useHandCursor: true })
       this.score = 0
       this.gameOverText.on("pointerdown", () => this.scene.start("gameScene"))
@@ -109,8 +110,8 @@ class GameScene extends Phaser.Scene {
       if (this.ship.x > 1920) {
         this.ship.x = 1920 
       }
-    }
-
+    } 
+    
     if (keyUpObj.isDown === true) {
       this.ship.y -= 6
       if (this.ship.y < 700) {
@@ -124,7 +125,7 @@ class GameScene extends Phaser.Scene {
         this.ship.y = 1080
       }
     }    
-
+    
     if (keySpaceObj.isDown === true) {
       if (this.fireMissile === false) {
         // fire missile
